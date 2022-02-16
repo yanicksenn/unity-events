@@ -1,0 +1,16 @@
+{
+  "name": "com.craipaigames.events",
+  "version": "1.0.1",
+  "displayName": "CG-Events",
+  "description": "This package contains the events concept presented by Ryan Hipple.",
+  "unity": "2020.3",
+  "unityRelease": "14f1",
+  "dependencies": {
+    "com.craipaigames.odininspector": "file:/Users/yanicksenn/Desktop/Unity/Package/OdinInspector"
+  },
+  "keywords": [ ],
+  "author": {
+    "name": "Craipai Games",
+    "email": "ys@yanicksenn.com"
+  }
+}
