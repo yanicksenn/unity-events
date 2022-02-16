@@ -1,15 +1,37 @@
-using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace CraipaiGames.Events
 {
     public class EventListener : MonoBehaviour
     {
-        [SerializeField, InlineProperty, HideLabel] 
-        private EventListenerEntry entry = new EventListenerEntry();
-        public EventListenerEntry Entry => entry;
+        [SerializeField]
+        private Event listeningOn;
+        public Event ListeningOn
+        {
+            get => listeningOn;
+            set => listeningOn = value;
+        }
         
-        private void OnEnable() => Entry.AddListener();
-        private void OnDisable() => Entry.RemoveListener();
+        [SerializeField]
+        private UnityEvent onInvocation = new UnityEvent();
+        public UnityEvent OnInvocation => onInvocation;
+        
+        [ContextMenu(nameof(Invoke))]
+        private void Invoke()
+        {
+            OnInvocation.Invoke();
+        }
+        
+        private void OnEnable()
+        {
+            if (ListeningOn != null)
+                ListeningOn.OnInvocation += Invoke;
+        }
+        private void OnDisable()
+        {
+            if (ListeningOn != null)
+                ListeningOn.OnInvocation -= Invoke;
+        }
     }
 }

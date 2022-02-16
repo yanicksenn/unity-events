@@ -15,8 +15,8 @@ namespace CraipaiGames.Events.Tests
             var trigger = new TestTrigger();
             
             var eventListener = gameObject.AddComponent<EventListener>();
-            eventListener.Entry.Event = @event;
-            eventListener.Entry.UnityEvent.AddListener(() => trigger.Trigger());
+            eventListener.ListeningOn = @event;
+            eventListener.OnInvocation.AddListener(() => trigger.Trigger());
             
             gameObject.SetActive(false);
             gameObject.SetActive(true);

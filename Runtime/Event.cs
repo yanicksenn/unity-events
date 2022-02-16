@@ -1,9 +1,8 @@
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace CraipaiGames.Events
 {
-    [CreateAssetMenu(menuName = "Events/Create event", fileName = "Event")]
+    [CreateAssetMenu(menuName = Events.RootMenu + "/Create event", fileName = "Event")]
     public class Event : ScriptableObject
     {
         public event EventDelegate OnInvocation;
@@ -16,7 +15,7 @@ namespace CraipaiGames.Events
             set => description = value;
         }
 
-        [Button("Invoke")]
+        [ContextMenu(nameof(Invoke))]
         public void Invoke()
         {
             OnInvocation?.Invoke();
