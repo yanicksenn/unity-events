@@ -1,18 +1,17 @@
 {
-    "name": "CraipaiGames.Events.Tests",
-    "rootNamespace": "CraipaiGames.Events.Tests",
+    "name": "Events.Tests",
+    "rootNamespace": "Events.Tests",
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "CraipaiGames.Events"
+        "Events"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,
     "precompiledReferences": [
-        "nunit.framework.dll",
-        "Sirenix.OdinInspector.Attributes.dll"
+        "nunit.framework.dll"
     ],
     "autoReferenced": false,
     "defineConstraints": [

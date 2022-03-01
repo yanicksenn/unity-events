@@ -1,4 +1,4 @@
-namespace CraipaiGames.Events.Tests
+namespace Events.Tests
 {
     public class TestTrigger
     {

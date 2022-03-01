@@ -3,7 +3,7 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-namespace CraipaiGames.Events.Tests
+namespace Events.Tests
 {
     public class EventListenerTest
     {

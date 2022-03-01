@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace CraipaiGames.Events
+namespace Events
 {
     [CreateAssetMenu(menuName = Events.RootMenu + "/Create event", fileName = "Event")]
     public class Event : ScriptableObject

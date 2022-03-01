@@ -1,4 +1,4 @@
-namespace CraipaiGames.Events
+namespace Events
 {
     /// <summary>
     /// Util class holding constants.

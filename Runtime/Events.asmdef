@@ -1,14 +1,12 @@
 {
-    "name": "CraipaiGames.Events",
-    "rootNamespace": "CraipaiGames.Events",
+    "name": "Events",
+    "rootNamespace": "Events",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,
-    "precompiledReferences": [
-        "Sirenix.OdinInspector.Attributes.dll"
-    ],
+    "precompiledReferences": [ ],
     "autoReferenced": true,
     "defineConstraints": [],
     "versionDefines": [],

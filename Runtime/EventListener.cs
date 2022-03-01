@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace CraipaiGames.Events
+namespace Events
 {
     public class EventListener : MonoBehaviour
     {
