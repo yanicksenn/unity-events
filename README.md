@@ -1,7 +1,7 @@
 # Unity Events
-Unity3d events allow for invoking and listening custom events through assets files rather than code.
+Unity3d events allowing the invocation and interpretation of custom events through ScriptableObjects.
 
-This projects is inspired on the [presentation](https://youtu.be/raQ3iHhE_Kk?t=1673) by [Ryan Hipple](https://twitter.com/roboryantron).
+This project is inspired on the [presentation](https://youtu.be/raQ3iHhE_Kk?t=1673) by [Ryan Hipple](https://twitter.com/roboryantron).
 
 Feedback is welcome.
 
