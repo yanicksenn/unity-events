@@ -3,35 +3,54 @@ using UnityEngine.Events;
 
 namespace Events
 {
+    /// <summary>
+    /// Listener for events.
+    /// </summary>
     public class EventListener : MonoBehaviour
     {
         [SerializeField]
         private Event listeningOn;
+        
+        /// <summary>
+        /// Event to listen to.
+        /// </summary>
         public Event ListeningOn
         {
             get => listeningOn;
-            set => listeningOn = value;
+            set
+            {
+                Unregister();
+                listeningOn = value;
+                Register();
+            }
         }
-        
+
         [SerializeField]
         private UnityEvent onInvocation = new UnityEvent();
         public UnityEvent OnInvocation => onInvocation;
         
+        /// <summary>
+        /// Invokes this event.
+        /// </summary>
         [ContextMenu(nameof(Invoke))]
-        private void Invoke()
+        public void Invoke()
         {
             OnInvocation.Invoke();
         }
         
-        private void OnEnable()
+        private void OnEnable() => Register();
+        private void OnDisable() => Unregister();
+
+        private void Register()
         {
-            if (ListeningOn != null)
-                ListeningOn.OnInvocation += Invoke;
+            if (listeningOn != null)
+                listeningOn.OnInvocation += Invoke;
         }
-        private void OnDisable()
+
+        private void Unregister()
         {
-            if (ListeningOn != null)
-                ListeningOn.OnInvocation -= Invoke;
+            if (listeningOn != null)
+                listeningOn.OnInvocation -= Invoke;
         }
     }
 }

@@ -1,5 +1,5 @@
 # Unity Events
-Unity3d events allowing the invocation and interpretation of custom events through ScriptableObjects.
+Unity3d package allowing the invocation and interpretation of custom events through ScriptableObjects.
 
 This project is inspired on the [presentation](https://youtu.be/raQ3iHhE_Kk?t=1673) by [Ryan Hipple](https://twitter.com/roboryantron).
 

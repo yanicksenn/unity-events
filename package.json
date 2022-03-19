@@ -2,7 +2,7 @@
   "name": "com.yanicksenn.unity.events",
   "version": "1.2.0",
   "displayName": "Unity Events",
-  "description": "This package contains the events concept presented by Ryan Hipple.",
+  "description": "Unity3d package allowing the invocation and interpretation of custom events through ScriptableObjects.",
   "unity": "2020.3",
   "unityRelease": "14f1",
   "keywords": [ ],
