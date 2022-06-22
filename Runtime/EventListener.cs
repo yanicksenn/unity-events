@@ -44,13 +44,13 @@ namespace Events
         private void Register()
         {
             if (listeningOn != null)
-                listeningOn.OnInvocation += Invoke;
+                listeningOn.OnInvocation.AddListener(Invoke);
         }
 
         private void Unregister()
         {
             if (listeningOn != null)
-                listeningOn.OnInvocation -= Invoke;
+                listeningOn.OnInvocation.RemoveListener(Invoke);
         }
     }
 }

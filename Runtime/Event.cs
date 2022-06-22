@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Events
 {
@@ -10,11 +11,9 @@ namespace Events
         fileName = "Event")]
     public class Event : ScriptableObject
     {
-        public event EventDelegate OnInvocation;
-
         [SerializeField, TextArea] 
         private string description;
-        
+
         /// <summary>
         /// Description.
         /// </summary>
@@ -24,13 +23,17 @@ namespace Events
             set => description = value;
         }
 
+        [SerializeField, Space]
+        private UnityEvent onInvoke = new UnityEvent();
+        public UnityEvent OnInvocation => onInvoke;
+
         /// <summary>
         /// Invokes this event.
         /// </summary>
         [ContextMenu(nameof(Invoke))]
         public void Invoke()
         {
-            OnInvocation?.Invoke();
+            OnInvocation.Invoke();
         }
     }
 }
